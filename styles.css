@@ -8,6 +8,34 @@
     -webkit-box-sizing: border-box;
 }
 
+/* Barra de navegación */
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main nav {
+    width: 10%;
+    padding: 2%;
+}
+
+main nav ul {
+    list-style: none;
+}
+
+main nav ul li {
+    margin: 30% 0;
+}
+
+
+.button {
+    display: none;
+}
+
+/* Header */
+
 header {
     width: 100%;
 }
@@ -19,60 +47,14 @@ header h1{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-main {
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-}
-
-main nav {
-    padding: 0 30px;
-    width: 10%;
-    margin-right: 10px;
-}
-
-main nav ul {
-    list-style: none;
-}
-
-main nav ul li {
-    margin-bottom: 80%;
-}
+/* Side */
 
 aside{
+    padding: 2%; 
+}
+
+aside {
     width: 20%;
-    padding: 0 30px;
-}
-
-section {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-}
-
-section article {
-    width: 50%;
-}
-
-section article {
-    margin-bottom: 30px;
-    font-size: 15px;
-}
-
-section article img {
-    height: 200px;
-}
-
-section article h2 {
-   
-    margin-bottom: 10px;
-}
-section article h3 {
-    font-style: italic;
-}
-
-section article p {
-   
-    margin-top: 10px;
 }
 
 aside h2 {
@@ -82,6 +64,45 @@ aside h2 {
 aside ol li {
     margin-bottom: 15px;
 }
+
+/* Section */
+section {
+    padding: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+}
+
+section article {
+    width: 50%;
+    padding: 2%;
+}
+
+section article {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+section article img {
+    height: 200px;
+    width: 95%;
+}
+
+
+section article h2 {
+    margin-bottom: 10px;
+}
+
+section article h3 {
+    font-style: italic;
+}
+
+section article p {
+    margin-top: 10px;
+}
+
+
+/* Footer */
 
 footer {
     height: 50px;
@@ -100,12 +121,29 @@ footer ul li a {
     color: sienna;
 }
 
+/* Rrsponsive design */
+
 @media screen and (max-width:700px){
-    .menu ul {
+    main {
+        margin: 20px;
+        flex-flow: column wrap;
+    }
+
+    aside {
         width: 100%;
+        padding: 10px;
+    }
+    section {
+        padding: 10px;
+        width: 100%;
+    }
+
+    section article {
+        width: 100%;
+    }
+    .menu ul {
+        width: 90%;
         position: absolute;
-        top: 45px;
-        left:10px;
         overflow: hidden;
         list-style: none;
         background: #f2f2f2;
@@ -114,6 +152,8 @@ footer ul li a {
     
     .menu li {
         position: relative;
+        margin: 0;
+        padding: 0;
     }
     
     .menu li:hover {
@@ -190,20 +230,4 @@ footer ul li a {
     }
     
     
-}
-
-
-@media screen and (max-width:700px){
-    main {
-        flex-flow: column wrap;
-    }
-    
-    aside {
-        width: 100%;
-    }
-
-    section article {
-        width: 100%;
-    }
-
 }
