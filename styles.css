@@ -8,37 +8,6 @@
     -webkit-box-sizing: border-box;
 }
 
-/* Barra de navegación */
-
-main {
-    display: flex;
-    flex-flow: row wrap;
-    font-family: 'Montserrat', sans-serif;
-}
-
-main nav {
-    width: 10%;
-    padding: 2%;
-}
-
-main nav ul {
-    list-style: none;
-}
-
-main nav ul li {
-    margin: 30% 0;
-}
-
-
-.button {
-    display: none;
-}
-
-/* Header */
-
-header {
-    width: 100%;
-}
 
 header h1{
     font-size: 40px;
@@ -47,35 +16,44 @@ header h1{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* Side */
+.hidden {
+    display: none;
+}
+main {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main nav {
+    padding: 0 30px;
+    width: 10%;
+    margin-right: 10px;
+}
+
+main nav ul {
+    list-style: none;
+}
+
+main nav ul li {
+    margin-bottom: 80%;
+}
+.button {
+    display: none;
+}
 
 aside{
-    padding: 2%; 
-}
-
-aside {
     width: 20%;
+    padding: 0 30px;
 }
 
-aside h2 {
-    margin-bottom: 20px;
-}
-
-aside ol li {
-    margin-bottom: 15px;
-}
-
-/* Section */
 section {
-    padding: 2%;
     display: flex;
     flex-flow: row wrap;
-    width: 70%;
+    width: 100%;
 }
 
 section article {
     width: 50%;
-    padding: 2%;
 }
 
 section article {
@@ -85,24 +63,28 @@ section article {
 
 section article img {
     height: 200px;
-    width: 95%;
 }
-
 
 section article h2 {
+   
     margin-bottom: 10px;
 }
-
 section article h3 {
     font-style: italic;
 }
 
 section article p {
+   
     margin-top: 10px;
 }
 
+aside h2 {
+    margin-bottom: 20px;
+}
 
-/* Footer */
+aside ol li {
+    margin-bottom: 15px;
+}
 
 footer {
     height: 50px;
@@ -121,28 +103,20 @@ footer ul li a {
     color: sienna;
 }
 
-/* Rrsponsive design */
-
 @media screen and (max-width:700px){
-    main {
-        margin: 20px;
-        flex-flow: column wrap;
+    .hidden-2 {
+        display: none;
     }
-
-    aside {
-        width: 100%;
-        padding: 10px;
+    .hidden {
+        display: block;
     }
-    section {
-        padding: 10px;
-        width: 100%;
+    .responsive {
+        display: flex;
+        flex-flow: row wrap;
     }
-
-    section article {
-        width: 100%;
-    }
+ 
     .menu ul {
-        width: 90%;
+        width: 100%;
         position: absolute;
         overflow: hidden;
         list-style: none;
@@ -152,8 +126,6 @@ footer ul li a {
     
     .menu li {
         position: relative;
-        margin: 0;
-        padding: 0;
     }
     
     .menu li:hover {
@@ -165,7 +137,6 @@ footer ul li a {
         text-decoration: none;
         color: #000;
         padding: 16px 5%;
-        line-height: 28px;
         display: block;
     }
     
@@ -230,4 +201,38 @@ footer ul li a {
     }
     
     
+}
+
+
+@media screen and (max-width:700px){
+    main {
+        display: flex;
+        flex-flow: column wrap;
+        
+    }
+    
+    aside {
+        width: 100%;
+    }
+
+    section article {
+        width: 100%;
+        padding: 2em;
+    }
+    section article img {
+        width: 100%;
+        height: auto;
+    }
+    section article img:hover {
+        transform: scale(0.9);
+    }
+}
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
 }
