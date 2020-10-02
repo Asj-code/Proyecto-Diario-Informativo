@@ -22,6 +22,8 @@ header h1{
 main {
     display: flex;
     font-family: 'Montserrat', sans-serif;
+    background-color: beige;
+    padding: 30px;
 }
 
 main nav {
@@ -53,12 +55,10 @@ section {
 }
 
 section article {
-    width: 50%;
-}
-
-section article {
     margin-bottom: 30px;
     font-size: 15px;
+    width: 40%;
+    margin: 10px;
 }
 
 section article img {
@@ -66,15 +66,14 @@ section article img {
 }
 
 section article h2 {
-   
     margin-bottom: 10px;
 }
+
 section article h3 {
     font-style: italic;
 }
 
 section article p {
-   
     margin-top: 10px;
 }
 
